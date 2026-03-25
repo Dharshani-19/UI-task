@@ -9,27 +9,47 @@
 </head>
 
 <body>
-    
-        <header class="head"><b><span class="one">TASK</span><span class="two"> MANAGER</span></b></header>
-        <div class="input"><input class="search" type="search" placeholder="Search here..."/></div>
-        <br>
 
-<div class="card-container">
+    <header class="head"><b><span class="one">TASK</span><span class="two"> MANAGER</span></b></header>
+    <div class="input"><input class="search" type="search" placeholder="Search here..." /></div>
+    <br>
+
+    <div class="card-container">
         <div class="card">
-        <div>
-            <img class="img" src="img1.jpg">
-            <h4 class="text">Enter the task to added:</h4>
-            <textarea  class="task" cols="20" rows="2"></textarea><br><button class="btn" type="submit">Add Task</button></div>
-        <br><select class="select">
-            <option value="" disabled selected>Select an option</option>
-            <option>All</option>
-            <option>Completed</option>
-            <option>Pending</option>
-        </select>
+            <div>
+                <img class="img" src="img1.jpg">
+                <h4 class="text">Enter the task to added:</h4>
+                <textarea class="task" id="taskInput" cols="20" rows="2"></textarea><br>
+                <select class="select" id="options1">
+                <option value="" disabled selected>Select an Task Status</option>
+                <option value="COMPLETED">Completed</option>
+                <option value="PENDING">Pending</option>
+            </select><br><br>
+                <button id="addTaskBtn" onclick="table()" class="addTaskBtn" type="submit">Add Task</button>
             </div>
+            <br><select class="select" id="options">
+                <option value="" disabled selected>Select an option</option>
+                <option value="all">All</option>
+                <option value="complete">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+        </div>
+        <br>
+        <table class="table" id="table">
+            <tr>
+                <th>Task Name</th>
+                <th>Task Status</th>
+                <th>Actions</th>
+            </tr>
+        </table>
 
 
-        <!-- <div class="contain">No task Found</div> -->
+        <div id="contain" class="contain">
+
+        </div>
     </div>
+
+    <script src="initial.js"></script>
 </body>
+
 </html>
