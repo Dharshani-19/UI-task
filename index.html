@@ -11,7 +11,7 @@
 <body>
 
     <header class="head"><b><span class="one">TASK</span><span class="two"> MANAGER</span></b></header>
-    <div class="input"><input class="search" type="search" placeholder="Search here..." /></div>
+    <div class="input"><input id="search" class="search" type="search" placeholder="Search here..." /></div>
     <br>
 
     <div class="card-container">
@@ -22,8 +22,8 @@
                 <textarea class="task" id="taskInput" cols="20" rows="2"></textarea><br>
                 <select class="select" id="options1">
                 <option value="" disabled selected>Select an Task Status</option>
-                <option value="COMPLETED">Completed</option>
-                <option value="PENDING">Pending</option>
+                <option value="true">Completed</option>
+                <option value="false">Pending</option>
             </select><br><br>
                 <button id="addTaskBtn" onclick="table()" class="addTaskBtn" type="submit">Add Task</button>
             </div>
